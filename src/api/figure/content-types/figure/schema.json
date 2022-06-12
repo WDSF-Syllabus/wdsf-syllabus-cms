@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "figures",
+  "info": {
+    "singularName": "figure",
+    "pluralName": "figures",
+    "displayName": "Figure"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dance": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dance.dance"
+    },
+    "name": {
+      "type": "string"
+    },
+    "startStep": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::step.step"
+    },
+    "endStep": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::step.step"
+    },
+    "startPositions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::position.position"
+    },
+    "endPositions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::position.position"
+    },
+    "timings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::timing.timing"
+    },
+    "notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::note.note"
+    }
+  }
+}
