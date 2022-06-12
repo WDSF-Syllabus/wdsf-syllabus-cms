@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_references",
+  "info": {
+    "singularName": "note-reference",
+    "pluralName": "note-references",
+    "displayName": "NoteReference"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
