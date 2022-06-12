@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timings",
+  "info": {
+    "singularName": "timing",
+    "pluralName": "timings",
+    "displayName": "Timing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    }
+  }
+}
