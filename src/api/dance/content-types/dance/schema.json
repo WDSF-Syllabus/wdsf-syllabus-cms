@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dances",
+  "info": {
+    "singularName": "dance",
+    "pluralName": "dances",
+    "displayName": "Dance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Standard",
+        "Latin"
+      ],
+      "default": "Standard",
+      "required": true
+    }
+  }
+}
