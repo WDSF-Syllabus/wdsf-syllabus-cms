@@ -4,19 +4,20 @@
   "info": {
     "singularName": "dance",
     "pluralName": "dances",
-    "displayName": "Dance"
+    "displayName": "Dance",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Type": {
+    "type": {
       "type": "enumeration",
       "enum": [
         "Standard",
