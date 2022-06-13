@@ -4,7 +4,8 @@
   "info": {
     "singularName": "figure",
     "pluralName": "figures",
-    "displayName": "Figure"
+    "displayName": "Figure",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +18,9 @@
       "target": "api::dance.dance"
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "startStep": {
       "type": "relation",
@@ -46,8 +49,14 @@
     },
     "notes": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::note.note"
+      "relation": "manyToMany",
+      "target": "api::note.note",
+      "inversedBy": "figures"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

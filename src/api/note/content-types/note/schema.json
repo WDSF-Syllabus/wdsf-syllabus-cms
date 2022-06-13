@@ -4,7 +4,8 @@
   "info": {
     "singularName": "note",
     "pluralName": "notes",
-    "displayName": "Note"
+    "displayName": "Note",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::note-reference.note-reference"
+    },
+    "figures": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::figure.figure",
+      "mappedBy": "notes"
     }
   }
 }
