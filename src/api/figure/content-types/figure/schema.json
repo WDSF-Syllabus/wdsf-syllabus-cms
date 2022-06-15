@@ -48,22 +48,6 @@
       "targetField": "name",
       "required": true
     },
-    "startFoot": {
-      "type": "enumeration",
-      "enum": [
-        "Right",
-        "Left"
-      ],
-      "required": true
-    },
-    "endFoot": {
-      "type": "enumeration",
-      "enum": [
-        "Right",
-        "Left"
-      ],
-      "required": true
-    },
     "startFootPlacements": {
       "type": "relation",
       "relation": "oneToMany",
@@ -73,6 +57,17 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::foot-placement.foot-placement"
+    },
+    "startFoot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::foot.foot",
+      "inversedBy": "figures"
+    },
+    "endFoot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::foot.foot"
     }
   }
 }

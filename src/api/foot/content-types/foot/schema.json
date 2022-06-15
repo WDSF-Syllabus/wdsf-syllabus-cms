@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feet",
+  "info": {
+    "singularName": "foot",
+    "pluralName": "feet",
+    "displayName": "Foot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "figures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::figure.figure",
+      "mappedBy": "startFoot"
+    }
+  }
+}
