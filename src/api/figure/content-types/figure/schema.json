@@ -22,16 +22,6 @@
       "required": true,
       "unique": true
     },
-    "startStep": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::step.step"
-    },
-    "endStep": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::step.step"
-    },
     "startPositions": {
       "type": "relation",
       "relation": "oneToMany",
@@ -57,6 +47,32 @@
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "startFoot": {
+      "type": "enumeration",
+      "enum": [
+        "Right",
+        "Left"
+      ],
+      "required": true
+    },
+    "endFoot": {
+      "type": "enumeration",
+      "enum": [
+        "Right",
+        "Left"
+      ],
+      "required": true
+    },
+    "startFootPlacements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::foot-placement.foot-placement"
+    },
+    "endFootPlacements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::foot-placement.foot-placement"
     }
   }
 }
