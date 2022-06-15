@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_categories",
+  "info": {
+    "singularName": "note-category",
+    "pluralName": "note-categories",
+    "displayName": "Note Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

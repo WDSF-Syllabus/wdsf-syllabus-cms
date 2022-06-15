@@ -17,16 +17,16 @@
       "required": true,
       "unique": true
     },
-    "noteReference": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::note-reference.note-reference"
-    },
     "figures": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::figure.figure",
       "mappedBy": "notes"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::note-category.note-category"
     }
   }
 }
