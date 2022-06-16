@@ -12,6 +12,7 @@ module.exports = createCoreController('api::figure.figure', ({ strapi }) =>  ({
 
     const entity = await strapi.db.query('api::figure.figure').findOne({
       where: { slug: id },
+      populate: true,
     });
 
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
